@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://ramananpydev.github.io/cinebook-react",
   "scripts": {
-    "homepage": "https://ramananpydev.github.io/cinebook-react",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
