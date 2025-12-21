@@ -1,11 +1,29 @@
+
+.nav img{
+    cursor: pointer;
+}
+
+.location{
+    display: flex;
+    gap: 20px;
+    font-size: 23px;
+    cursor: pointer;
+    margin: 1cm 0 0 1cm;
+}
+.loc-icon{
+    color: rgb(75, 129, 209);
+    padding-right: 20px;
+}
 .nav{
     display: flex;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 8px;
 }
 .nav ul{
     display: flex;              
     gap: 1.5cm;
     font-size: 23px;
     padding: 20px 2cm  0 5cm;
+    cursor: pointer;
 }
 .nav ul li{
     display: flex;
@@ -17,11 +35,13 @@ input{
     border-radius: 10px;
     font-size: 18px;
     margin-top: 30px;
+    cursor: pointer;
     
     padding-left: 2cm;
 }
 .search-icon{
     position: relative;
+    cursor: pointer;
     right: 23%;
     top: 45px;
     font-size: 20px;
@@ -41,14 +61,4 @@ input{
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
     
-}
-.location{
-    display: flex;
-    gap: 20px;
-    font-size: 23px;
-    margin: 1cm 0 0 1cm;
-}
-.loc-icon{
-    color: rgb(75, 129, 209);
-    padding-right: 20px;
 }
