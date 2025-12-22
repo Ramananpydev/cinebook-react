@@ -3,17 +3,18 @@
   grid-template-columns: repeat(4, 1fr);
   row-gap: 2cm;
   padding: 40px;
+  width: 100%;
 
 }
 
 .movie-card {
-  margin: 0 1cm 0 0;
+  margin: 0 20px 0 0;
   border: 2px solid rgb(224, 215, 215);
   background: #ffffff;
   border-radius: 14px;
   overflow: hidden;
   cursor: pointer;
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 .movie-card img {
