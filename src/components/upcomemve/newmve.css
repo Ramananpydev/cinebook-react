@@ -4,7 +4,7 @@
   background-position: center;
   position: relative;
   color: white;
-   margin-bottom: 20cm;
+  margin-bottom: 60px;
 }
 
 .overlay {
@@ -81,9 +81,9 @@
     color: black;
     font-size: 20px;
     padding-left:50px;
-    margin-top: 1cm;
-}
-.abp{
+    margin-top: 2cm;
+  }
+  .abp{
     color: #413f3f;
     font-size: 20px;
     margin-top: 1cm;
@@ -99,26 +99,116 @@
     margin-top: 1cm;
 }
 
-.offer-text{
-    text-align: center;
-    margin-top: 1cm;
+.offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  padding-bottom: 2cm;
 }
-.btns{
-    cursor: pointer;
-    font-size: 20px;
-    color: #413f3f;
-    position: relative;
-    right: 250px;
-    bottom: 20px;
-    margin: 0 0 0 15cm ;
-    background: none;
-    border: none;
+
+.offer-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  min-width: 320px;
+  text-align: center;
 }
-.offer{
-    margin-top: 2cm;
-    /* background-image: url('../../../public/ticket.avif'); */
-    background-size: contain;
-    /* border: 2px solid rgb(80, 78, 78); */
-    border-radius: 10px;
-    margin-right: 40px;
+
+.btns {
+  cursor: pointer;
+  font-size: 26px;
+  color: #333;
+  background: none;
+  border: none;
+}
+
+.showtime-page {
+  padding: 30px;
+  background: #f5f5f5;
+}
+
+/* DATE BAR */
+.date-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.date-bar button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.date-bar .active {
+  background: black;
+  color: white;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filters button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.filters .active {
+  border-color: #6c5ce7;
+  color: #6c5ce7;
+}
+
+/* THEATRE CARD */
+.theatre-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.theatre-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theatre-header h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.theatre-header p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* SHOWTIMES */
+.showtime-list {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.showtime-list button {
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.showtime-list span {
+  font-size: 12px;
+  color: #666;
 }

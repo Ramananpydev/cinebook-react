@@ -4,12 +4,12 @@ html, body {
 }
 
 .app-layout {
-  min-height: 100vh;        /* full screen height */
+  min-height: 100vh;        
   display: flex;
   flex-direction: column;
 }
 
 .page-content {
-  flex: 1;                  /* pushes footer to bottom */
-  margin-top: 80px;         /* header height (if header fixed) */
+  flex: 1;                  
+  margin-top: 80px;         
 }

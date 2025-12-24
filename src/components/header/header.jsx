@@ -41,12 +41,7 @@ function Header() {
 
             <button className="submit">Login</button>
 
-            <p
-              className="close"
-              onClick={() => setShowForm(false)}
-            >
-              ✖ Close
-            </p>
+            <p className="close" onClick={() => setShowForm(false)}>✖ Close</p>
           </div>
         </div>
       )}
