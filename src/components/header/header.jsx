@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { FaLocationDot } from 'react-icons/fa6'
+import { Link } from "react-router-dom";
+import SignIn from '../signin/signin';
 import './header.css'
 
 function Header() {
-
-  const [showForm, setShowForm] = useState(false)
+        const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -19,32 +20,20 @@ function Header() {
 
         <nav>
           <ul>
-            <li>Home</li>
-            <li>Movie</li>
-            <li>Theatres</li>
-            <li>Order</li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/movies">Movie</Link></li>
+              <li><Link to="/theatres">Theatres</Link></li>
+              <li><Link to="/orders">Order</Link></li>
           </ul>
         </nav>
 
         <input type="text"  placeholder="Search movies, cinema and more"  className="search" />
         <FaSearch className="search-icon" />
 
-        <button className='btn btn-first' onClick={() => setShowForm(true)}>  Sign in</button>
+        <button className='btn btn-first' onClick={() => setOpen(true)}>  Sign in</button>
       </div>
-      {showForm && (
-        <div className="all">
-          <div className="signin-form">
-            <h2>Sign In</h2>
+      {open && <SignIn onClose={() => setOpen(false)} />}
 
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-
-            <button className="submit">Login</button>
-
-            <p className="close" onClick={() => setShowForm(false)}>✖ Close</p>
-          </div>
-        </div>
-      )}
     </>
   )
 }

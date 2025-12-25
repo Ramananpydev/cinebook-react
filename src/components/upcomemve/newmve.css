@@ -100,6 +100,10 @@
 }
 
 .offer {
+  background-image: url('../../../public/card.avif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 97%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,106 +113,20 @@
 }
 
 .offer-text {
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
+  padding-top: 6cm;
+  font-size: 38px;
+  font-weight: 1500px;
+  color:yellow;
   min-width: 320px;
   text-align: center;
 }
 
 .btns {
+  padding-top: 6cm;
   cursor: pointer;
   font-size: 26px;
-  color: #333;
+  color: #ffffff;
   background: none;
   border: none;
 }
 
-.showtime-page {
-  padding: 30px;
-  background: #f5f5f5;
-}
-
-/* DATE BAR */
-.date-bar {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.date-bar button {
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  background: white;
-  cursor: pointer;
-}
-
-.date-bar .active {
-  background: black;
-  color: white;
-}
-
-/* FILTERS */
-.filters {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
-.filters button {
-  padding: 8px 14px;
-  border-radius: 20px;
-  border: 1px solid #ddd;
-  background: white;
-  cursor: pointer;
-}
-
-.filters .active {
-  border-color: #6c5ce7;
-  color: #6c5ce7;
-}
-
-/* THEATRE CARD */
-.theatre-card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.theatre-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.theatre-header h3 {
-  margin: 0;
-  font-size: 17px;
-}
-
-.theatre-header p {
-  font-size: 13px;
-  color: #666;
-}
-
-/* SHOWTIMES */
-.showtime-list {
-  display: flex;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.showtime-list button {
-  padding: 12px 18px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  background: white;
-  cursor: pointer;
-}
-
-.showtime-list span {
-  font-size: 12px;
-  color: #666;
-}

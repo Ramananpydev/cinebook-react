@@ -6,6 +6,10 @@ import Sideimg from './components/imageslide/sideimg'
 import Movielist from './components/movies/movielist'
 import Footer from './components/footer/footer'
 import Newmve from './components/upcomemve/newmve'
+import BookTicket from './components/booking/booking';
+import Movie from './pages/movie';
+import Theatres from './pages/theatres';
+import Orders from './pages/order/order';
 function App() {
 
   const img = [
@@ -33,8 +37,10 @@ function App() {
       <main className="page-content">
 
       <Routes>
-        
-        <Route path="/" element={
+          <Route path="/movies" element={<Movie movies={img} />} />
+          <Route path="/theatres" element={<Theatres />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/" element={
           <div>
               <Sideimg />
               <div className="movies">
@@ -44,8 +50,8 @@ function App() {
               </div>
             </div>
           }/>
-           {/* <Route path="/" element={<Home />} /> */}
         <Route path="/movie/:id" element={<Newmve />} />
+        <Route path="/book/:id" element={<BookTicket />} />
       </Routes>
       </main>
       <Footer/>

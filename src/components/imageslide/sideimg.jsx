@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Avatar from '../../assets/Avatar1.jpg'
 import Cine from '../../assets/xmas.jpg'
-import Ticket from '../../assets/ticket.jpg'
+import Ticket from '../../assets/ticket99.jpg'
 import './sideimg.css'
 
 function Sideimg() {

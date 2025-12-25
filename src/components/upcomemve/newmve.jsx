@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import "./newmve.css";
@@ -32,7 +33,7 @@ const movies = [
     formats: "2D",
     languages: "Hindi,Tamil",
     poster: "/TereIshkMei.jpg",
-    banner: "/TereIshkMeiban.jpg",
+    banner: "/TereIshkMeibann.jpg",
     about:"About the movie",
     content:"Some souls are meant to collide. Some love stories are destined to burn brighter."
   },
@@ -64,7 +65,7 @@ const movies = [
     formats: "2D",
     languages: "Tamil",
     poster: "/Kombuseevi.jpg",
-    banner: "/Kombuseevi.jpg",
+    banner: "/Kombuseeviban.jpg",
     about:"About the movie",
     content:"Having a miserable past of being evacuated from their homeland and losing their livelihood, Rokkapuli and Pandi are among the main people of the village who aspire to become millionaires by peddling ganja (marijuana). Can they successfully achieve their dream?"
   },
@@ -80,7 +81,7 @@ const movies = [
     formats: "2D",
     languages: "Malayalam",
     poster: "/Kalamkaval.jpg",
-    banner: "/Kalamkaval.jpg",
+    banner: "/Kalamkaval.webp",
     about:"About the movie",
     content:"A routine Kerala Police inquiry in the quiet village of Kottayikonam takes an unexpected turn when a trail of seemingly minor clues unravels a series of disturbing, long-buried cases. As the officers dig deeper, they find themselves confronting mysteries that have haunted the village for years and a web of brilliant, calculated obstructions designed to block every step of their investigation."
   },
@@ -96,7 +97,7 @@ const movies = [
     formats: "2D, DOLBY CINEMA 2D,IMAX 2D",
     languages: "Hindi ",
     poster: "/dhuran.jpg",
-    banner: "/dhuran.jpg",
+    banner: "/dhurandharban.avif",
     about:"About the movie",
     content:"Dhurandhar is a genre-bending, edge-of-the-seat action thriller with big stars playing iconic characters. Told with audacious swagger, the story follows a mysterious traveller as he slips into the heart of Karachi's underbelly and rises through its ranks with lethal precision, only to tear the notorious ISI-Underworld nexus apart from within."
   },
@@ -112,7 +113,7 @@ const movies = [
     formats: "2D",
     languages: "Malayalam ",
     poster: "/BhaBhaBa.jpg",
-    banner: "/BhaBhaBa.jpg",
+    banner: "/BhaBhaBaban.jpg",
     about:"About the movie",
     content:"A faceless nobody unleashes statewide chaos to carve his identity, fueled by vengeance and a haunting past. As his power rises, the system launches an all-out war to stop the storm he has become. "
   },
@@ -136,7 +137,7 @@ const movies = [
     id: "9",
     title: "Anaconda",
     rating: "Add your rating & review",
-    votes: "Your ratings matter",
+    votes: "5.5/10",
     duration: "1h 39m",
     genre: "Action,Adventure,Comedy,Horror,Thriller",
     censor: "UA16+",
@@ -144,7 +145,7 @@ const movies = [
     formats: "2D,4DX,MX4D",
     languages: "English,Tamil,+2",
     poster: "/Anaconda.webp",
-    banner: "/Anaconda.webp",
+    banner: "/Anacondaban.jpeg",
     about:"About the movie",
     content:"A group of friends is going through a mid-life crisis. They decide to remake a favourite movie from their youth, but encounter unexpected events when they enter the jungle. "
   },
@@ -160,7 +161,7 @@ const movies = [
     formats: "2D",
     languages: "Tamil",
     poster: "/RettaThala.jpg",
-    banner: "/RettaThala.jpg",
+    banner: "/RettaThalaban.jpg",
     about:"About the movie",
     content:"Retta Thala is a Tamil movie starring Arun Vijay, Siddhi Idnani, Yogesh Samy and John Vijay in prominent roles. It is written and directed by Kris Thirukumaran "
   },
@@ -176,13 +177,13 @@ const movies = [
     formats: "2D",
     languages: "English",
     poster: "/MissionSanta.jpg",
-    banner: "/MissionSanta.jpg",
+    banner: "/xmasban.jpg",
     about:"About the movie",
     content:"Mission Santa: Yoyo to the Rescue is a pulse-pounding, laugh-out-loud animated adventure where Santa teams up with daring kids to save Christmas from the ultimate naughty nemesis! "
   },
     {
     id: "12", 
-    title: "Zootopia", 
+    title: "Zootopia-2", 
     rating: "9.1/10", 
     votes: "17.6K Votes", 
     duration: "1h 48m", 
@@ -197,6 +198,8 @@ const movies = [
 ];
 
 function Newmve() {
+  const navigate = useNavigate();
+
 
   const offers = [
     "YES Private Debit Card Offer",
@@ -254,41 +257,8 @@ function Newmve() {
                 <span>{movie.languages}</span>
               </div>
 
-              <button className="book-btn">Book tickets</button>
+              <button className="book-btn" onClick={() => navigate(`/book/${movie.id}`)}> Book tickets</button>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="showtime-page">
-        <div className="date-bar">
-          <button className="active">24<br/>Wed</button>
-          <button>25<br/>Thu</button>
-          <button>26<br/>Fri</button>
-          <button>27<br/>Sat</button>
-          <button>28<br/>Sun</button>
-        </div>
-
-        <div className="filters">
-          <button>Filters</button>
-          <button className="active">Tamil</button>
-          <button>3D</button>
-          <button>Morning</button>
-          <button>After 5 PM</button>
-        </div>
-
-        <div className="theatre-card">
-          <div className="theatre-header">
-            <div>
-              <h3>Sangam Cinemas 4K RGB Laser Dolby Atmos</h3>
-              <p>2.4 km away • Non-cancellable</p>
-            </div>
-            <FaHeart />
-          </div>
-
-          <div className="showtime-list">
-            <button>02:10 PM<br/><span>3D</span></button>
-            <button>06:30 PM<br/><span>3D</span></button>
-            <button>10:50 PM<br/><span>3D</span></button>
           </div>
         </div>
       </div>
